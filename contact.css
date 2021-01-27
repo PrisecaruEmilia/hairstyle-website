@@ -1,0 +1,523 @@
+@font-face { font-family: Courier; font-weight: bold; src: url('fonts/cour.ttf'); }
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: #333333;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.header li a {
+  text-align: center;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #C0830E;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+    height:100px;
+    width:100px;
+  
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+.button{
+  display: none;
+}
+.titlu>h1{
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: Courier;
+  text-align: center;
+  font-weight: bolder;
+}
+.linie{
+  margin-top: 5px;
+  border-top: 2px solid black;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+section{
+  margin-top: 30px;
+}
+section>h3{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+/*.contact form{
+  display: grid;
+  grid-template-columns: 1fr;
+}*/
+form{
+  margin-top: 20px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+form>p{
+  padding: 10px;
+}
+.contact{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+form p label{
+    margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+form p input{
+  margin-left: 10px;
+  height: 30px;
+  width: 90%;
+  border-radius: 15px;
+  border:1px solid #797979;
+}
+form p textarea{
+
+  width: 100%;
+}
+form p button{
+  background-color: #C0830E;
+  border-radius: 20px;
+  color: white;
+  font-family: Courier;
+  padding: 15px 32px;
+  display: block;
+   margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top:5px;
+  cursor: pointer;
+}
+
+aside{
+  margin-top: 20px;
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+aside>div{
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.phone{
+  text-align: center;
+  height: 40px;
+  width: 50px;
+}
+.nr{
+  text-align: center;
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 25px;
+  color: #C0830E;
+  font-weight: bold;
+}
+.adresa{
+  margin-top: 25px;
+
+}
+.adresa >h3{
+  text-align: center;
+}
+.ad{
+  margin-top: 15px;
+}
+.adresa>p
+{
+  font-weight: bold;
+  margin-left: 20px;
+}
+.mapouter{
+  display: none;
+}
+footer{
+  margin-top: 20px;
+  height: 80px;
+  background-color: #333333;
+}
+.uno{
+  border-top: 1px solid #333333;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+img{
+  height:40px;
+  width: 40px;
+}
+.media{
+  text-align: center;
+}
+.tres{
+    font-size: 10px;
+  text-align: center;
+}
+.tres >p{
+  color: white;
+}
+
+@media (min-width: 48em) and (max-width: 64em){
+  .forgot{
+    display: none;
+  }
+  
+  .header{
+    position: relative;
+    height: 100px;
+  }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 20px;
+  }
+  .header .menu {
+    margin-top:20px;
+   /* margin-right: 400px;*/
+    clear: none;
+    position: absolute;
+    right: 150px;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .button {
+  position: absolute;
+  right: 7px;
+  background-color: #C0830E;
+  border-radius: 26px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right:0px;
+  margin-top:24px;
+  cursor: pointer;
+}
+.titlu>h1{
+  margin-top: 30px;
+  font-size: 38px;
+}
+.linie{
+  width: 30%;
+}
+aside{
+  width: 65%;
+}
+aside>div{
+  width: 65%;
+}
+.phone{
+  height: 50px;
+  width: 50px;
+}
+.nr{
+  font-size: 40px;
+}
+section>h3{
+  font-size: 30px;
+  }
+  form p input{
+  width: 300px;
+}
+.adresa >h3{
+  text-align: center;
+  font-size: 30px;
+}
+
+.adresa>p
+{
+  font-weight: bold;
+  margin-left: 50px;
+  font-size: 20px;
+}
+.mapouter{
+  margin-top:25px;
+  display:block;
+  text-align:center;
+  height:500px;
+  width:auto;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:500px;
+  width:auto;
+}
+ footer{
+  margin-top: 20px;
+  height: 100px;
+  background-color: #333333;
+}
+.uno{
+  border-top: 1px solid #333333;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+img{
+  height:50px;
+  width: 50px;
+}
+.media{
+  text-align: center;
+}
+.tres{
+    font-size: 15px;
+  text-align: center;
+}
+.tres >p{
+  color: white;
+}
+}
+
+@media (min-width: 1025px)
+{
+
+ .forgot{
+  display: none;
+ }
+  .header .logo {
+    display: block;
+    float: left;
+      height:120px;
+      width:130px;
+    }
+  .header{
+      position: relative;
+      height: 100px;
+    }
+    .header li {
+      float: left;
+    }
+  .header li a {
+    font-size: 25px;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 20px 20px;
+  }
+  .header .menu {
+    margin-top:20px;
+   /* margin-right: 400px;*/
+    clear: none;
+    position: absolute;
+    right: 350px;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .button {
+  position: absolute;
+  right: 100px;
+  background-color: #C0830E;
+  border-radius: 26px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right:0px;
+  margin-top:24px;
+  cursor: pointer;
+}
+  .titlu>h1{
+    font-size: 46px;
+  }
+  .linie{
+    width: 25%;
+  }
+  .desktop
+  {
+  	display: flex;
+    margin-top: 10px;
+  }
+  aside{ 
+  	margin-top: 20px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+aside>div{
+	width: 100%;
+}
+section{
+	margin-top: 20px;
+  width: 60%;
+}
+.phone{
+  height: 50px;
+  width: 50px;
+}
+.nr{
+  font-size: 40px;
+}
+section>h3{
+  font-size: 40px;
+  }
+  .adresa{
+    margin-top: 40px;
+  }
+  .adresa >h3{
+  text-align: center;
+  font-size: 40px;
+}
+
+.adresa>p
+{
+  font-weight: bold;
+  margin-left: 50px;
+  font-size: 30px;
+}
+.mapouter{
+  margin-top:25px;
+  display:block;
+  text-align:center;
+  height:600px;
+  width:auto;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:600px;
+  width:auto;
+}
+footer{
+    height: 110px;
+  }
+  .uno{
+    font-size: 20px;
+  }
+img{
+  height: 60px;
+  width: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+  .tres{
+    font-size: 15px;
+  }
+}
